@@ -38,6 +38,10 @@ class RestaurantTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
+        // Self Sizing Cells
+        self.tableView.estimatedRowHeight = 80.0;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
     }
 
     override func didReceiveMemoryWarning() {
