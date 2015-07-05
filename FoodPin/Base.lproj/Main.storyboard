@@ -37,13 +37,21 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="KsR-YI-CQt">
-                                            <rect key="frame" x="281" y="7" width="23" height="23"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="KsR-YI-CQt">
+                                            <rect key="frame" x="271" y="7" width="23" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="Kgs-cb-ATH"/>
+                                                <constraint firstAttribute="height" constant="23" id="h2m-QY-ohC"/>
+                                            </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhO-Em-QDb">
                                             <rect key="frame" x="18" y="10" width="60" height="60"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KsR-YI-CQt" secondAttribute="trailing" constant="18" id="PeX-3G-zg0"/>
+                                        <constraint firstItem="KsR-YI-CQt" firstAttribute="top" secondItem="zF6-kS-MFj" secondAttribute="topMargin" constant="-1" id="cLY-gd-we1"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="favorIconImageView" destination="KsR-YI-CQt" id="Z5H-8S-EhB"/>
