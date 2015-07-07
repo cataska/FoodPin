@@ -76,6 +76,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    @IBAction func close(segue: UIStoryboardSegue) {
+        
+    }
+
     /*
     // MARK: - Navigation
 
