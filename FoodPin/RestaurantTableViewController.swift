@@ -159,6 +159,10 @@ class RestaurantTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue) {
+        
+    }
+    
     /*
     // MARK: TableView delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
