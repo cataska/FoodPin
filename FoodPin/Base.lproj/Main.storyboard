@@ -156,7 +156,11 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xoM-D0-Mh4"/>
-                                    <barButtonItem systemItem="action" id="CeV-rm-jj0"/>
+                                    <barButtonItem systemItem="action" id="CeV-rm-jj0">
+                                        <connections>
+                                            <segue destination="Dyb-H4-viq" kind="modal" identifier="showShare" id="vkz-ko-r37"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nIo-sw-amV"/>
                                     <barButtonItem systemItem="compose" id="F0d-QO-r9k">
                                         <connections>
@@ -316,6 +320,105 @@
             </objects>
             <point key="canvasLocation" x="1688" y="363"/>
         </scene>
+        <!--Share View Controller-->
+        <scene sceneID="HSe-Nf-d5D">
+            <objects>
+                <viewController id="Dyb-H4-viq" customClass="ShareViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s68-Cx-S6F"/>
+                        <viewControllerLayoutGuide type="bottom" id="K4n-BB-av9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z1q-LE-IJs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeloisl" translatesAutoresizingMaskIntoConstraints="NO" id="A04-zv-6Fo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEa-Tl-DZM">
+                                <rect key="frame" x="274" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6ph-Zc-bIh"/>
+                                    <constraint firstAttribute="height" constant="30" id="n7W-85-PFx"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <segue destination="hrP-MC-Kvf" kind="unwind" unwindAction="close:" id="gaJ-gN-grm"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzl-K5-qEF">
+                                <rect key="frame" x="65" y="132" width="90" height="90"/>
+                                <color key="backgroundColor" red="0.30647739808055224" green="0.4764817752728735" blue="0.90895280934343436" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="5kT-t7-opu"/>
+                                    <constraint firstAttribute="width" constant="90" id="tcY-5i-5Md"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="facebook"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aY-Oa-Q7j">
+                                <rect key="frame" x="154" y="132" width="90" height="90"/>
+                                <color key="backgroundColor" red="0.097310094420000007" green="0.73471876830000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="2wv-Lu-91G"/>
+                                    <constraint firstAttribute="width" constant="90" id="QvY-Le-5lG"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="twitter"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnk-uI-c9A">
+                                <rect key="frame" x="65" y="222" width="90" height="90"/>
+                                <color key="backgroundColor" red="1" green="0.20907085210000001" blue="0.25358408799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="CSd-kY-BID"/>
+                                    <constraint firstAttribute="height" constant="90" id="iVG-vz-cjW"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="message"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUH-HD-V7i">
+                                <rect key="frame" x="154" y="222" width="90" height="90"/>
+                                <color key="backgroundColor" red="1" green="0.49629389947866887" blue="0.13730736712458202" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Nzm-q6-Obx"/>
+                                    <constraint firstAttribute="height" constant="90" id="wVY-ry-Ird"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="email"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vUH-HD-V7i" firstAttribute="top" secondItem="6aY-Oa-Q7j" secondAttribute="bottom" id="2Ky-dJ-Euo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vUH-HD-V7i" secondAttribute="trailing" constant="60" id="7Hv-ay-VG9"/>
+                            <constraint firstItem="6aY-Oa-Q7j" firstAttribute="top" secondItem="s68-Cx-S6F" secondAttribute="bottom" constant="112" id="8FK-PN-nkK"/>
+                            <constraint firstItem="A04-zv-6Fo" firstAttribute="leading" secondItem="Z1q-LE-IJs" secondAttribute="leadingMargin" constant="-16" id="BdH-rx-UlU"/>
+                            <constraint firstItem="kEa-Tl-DZM" firstAttribute="trailing" secondItem="Z1q-LE-IJs" secondAttribute="trailingMargin" id="DCN-gc-pye"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6aY-Oa-Q7j" secondAttribute="trailing" constant="60" id="JO5-Xv-2gt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qnk-uI-c9A" secondAttribute="trailing" constant="149" id="KHK-Id-uek"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tzl-K5-qEF" secondAttribute="trailing" constant="149" id="N3a-9Y-7VA"/>
+                            <constraint firstItem="K4n-BB-av9" firstAttribute="top" secondItem="A04-zv-6Fo" secondAttribute="bottom" id="Yn3-84-Ynp"/>
+                            <constraint firstItem="tzl-K5-qEF" firstAttribute="top" secondItem="s68-Cx-S6F" secondAttribute="bottom" constant="112" id="aTF-bY-kRd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A04-zv-6Fo" secondAttribute="trailing" constant="-16" id="bRg-1w-aTv"/>
+                            <constraint firstItem="A04-zv-6Fo" firstAttribute="top" secondItem="Z1q-LE-IJs" secondAttribute="topMargin" id="c3o-0W-Ev2"/>
+                            <constraint firstItem="kEa-Tl-DZM" firstAttribute="top" secondItem="s68-Cx-S6F" secondAttribute="bottom" id="fls-lD-pu6"/>
+                            <constraint firstItem="Qnk-uI-c9A" firstAttribute="top" secondItem="tzl-K5-qEF" secondAttribute="bottom" id="q5N-Sm-0pC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="A04-zv-6Fo" id="dSv-hi-Kde"/>
+                        <outlet property="emailButton" destination="vUH-HD-V7i" id="J5K-3Q-s3L"/>
+                        <outlet property="facebookButton" destination="tzl-K5-qEF" id="I9g-c0-7At"/>
+                        <outlet property="messageButton" destination="Qnk-uI-c9A" id="f7B-Xa-z20"/>
+                        <outlet property="twitterButton" destination="6aY-Oa-Q7j" id="UBd-qa-3Vp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EI3-X0-7y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hrP-MC-Kvf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="1022"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4CH-S9-yBG">
             <objects>
@@ -339,9 +442,13 @@
         <image name="bad" width="64" height="64"/>
         <image name="cafeloisl" width="640" height="640"/>
         <image name="close" width="64" height="64"/>
+        <image name="email" width="64" height="64"/>
+        <image name="facebook" width="64" height="64"/>
         <image name="good" width="64" height="64"/>
         <image name="great" width="64" height="64"/>
         <image name="heart" width="64" height="64"/>
+        <image name="message" width="64" height="64"/>
+        <image name="twitter" width="64" height="64"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

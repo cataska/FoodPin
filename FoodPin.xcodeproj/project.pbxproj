@@ -13,6 +13,7 @@
 		7B63E05A1B45110500AECF33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B63E0581B45110500AECF33 /* LaunchScreen.xib */; };
 		7B63E0661B45110500AECF33 /* FoodPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E0651B45110500AECF33 /* FoodPinTests.swift */; };
 		7B8194DE1B4BD00800FDA938 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8194DD1B4BD00800FDA938 /* ReviewViewController.swift */; };
+		7B8194E01B4C2B9200FDA938 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */; };
 		7B92CBE01B4512D0007FEDA1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92CBDF1B4512D0007FEDA1 /* RestaurantTableViewController.swift */; };
 		7B92CBE21B4525A5007FEDA1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92CBE11B4525A5007FEDA1 /* CustomTableViewCell.swift */; };
 		7B92CBE41B457CD2007FEDA1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92CBE31B457CD2007FEDA1 /* DetailViewController.swift */; };
@@ -41,6 +42,7 @@
 		7B63E0641B45110500AECF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B63E0651B45110500AECF33 /* FoodPinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinTests.swift; sourceTree = "<group>"; };
 		7B8194DD1B4BD00800FDA938 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		7B92CBDF1B4512D0007FEDA1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		7B92CBE11B4525A5007FEDA1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7B92CBE31B457CD2007FEDA1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				7B92CBE71B46E0DC007FEDA1 /* DetailTableViewCell.swift */,
 				7B92CBE51B469260007FEDA1 /* Restaurant.swift */,
 				7B8194DD1B4BD00800FDA938 /* ReviewViewController.swift */,
+				7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */,
 				7B63E0531B45110500AECF33 /* Main.storyboard */,
 				7B63E0561B45110500AECF33 /* Images.xcassets */,
 				7B63E0581B45110500AECF33 /* LaunchScreen.xib */,
@@ -233,6 +236,7 @@
 				7B92CBE21B4525A5007FEDA1 /* CustomTableViewCell.swift in Sources */,
 				7B92CBE01B4512D0007FEDA1 /* RestaurantTableViewController.swift in Sources */,
 				7B63E0501B45110500AECF33 /* AppDelegate.swift in Sources */,
+				7B8194E01B4C2B9200FDA938 /* ShareViewController.swift in Sources */,
 				7B92CBE41B457CD2007FEDA1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
