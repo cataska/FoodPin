@@ -125,17 +125,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-sC-zMm">
-                                                    <rect key="frame" x="116" y="8" width="186" height="20"/>
+                                                    <rect key="frame" x="116" y="8" width="162" height="20"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Te1-0V-WNK">
+                                                    <rect key="frame" x="282" y="3" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.097310094420000007" green="0.73471876830000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                    <state key="normal" title="Map">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="xKB-Qo-CMI" kind="push" identifier="showMap" id="k46-rM-1ag"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jua-sC-zMm" secondAttribute="trailing" constant="34" id="0nE-2r-fnl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Te1-0V-WNK" secondAttribute="bottom" constant="-6" id="9M0-YU-ZMr"/>
                                                 <constraint firstItem="kll-TT-aDs" firstAttribute="top" secondItem="BQl-Fw-bin" secondAttribute="topMargin" id="Bpq-3R-ZYG"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Jua-sC-zMm" secondAttribute="trailing" constant="10" id="GNO-tv-s7m"/>
+                                                <constraint firstItem="Te1-0V-WNK" firstAttribute="trailing" secondItem="BQl-Fw-bin" secondAttribute="trailingMargin" id="Hcg-bf-y60"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Jua-sC-zMm" secondAttribute="bottom" constant="-0.5" id="ISO-zw-nqH"/>
                                                 <constraint firstItem="Jua-sC-zMm" firstAttribute="top" secondItem="BQl-Fw-bin" secondAttribute="topMargin" id="OPf-IY-4Nk"/>
+                                                <constraint firstItem="Te1-0V-WNK" firstAttribute="top" secondItem="BQl-Fw-bin" secondAttribute="topMargin" constant="-5" id="PIZ-Jh-KSv"/>
                                                 <constraint firstItem="kll-TT-aDs" firstAttribute="leading" secondItem="BQl-Fw-bin" secondAttribute="leadingMargin" constant="9" id="dqM-qy-0AH"/>
                                                 <constraint firstItem="Jua-sC-zMm" firstAttribute="leading" secondItem="BQl-Fw-bin" secondAttribute="leadingMargin" constant="108" id="yrK-30-UBY"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="kll-TT-aDs" secondAttribute="bottom" id="zV7-aj-CxH"/>
@@ -143,6 +157,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="fieldLabel" destination="kll-TT-aDs" id="MJm-kH-cT6"/>
+                                            <outlet property="mapButton" destination="Te1-0V-WNK" id="wYC-th-reX"/>
                                             <outlet property="valueLabel" destination="Jua-sC-zMm" id="Zqs-SR-W9w"/>
                                         </connections>
                                     </tableViewCell>
@@ -319,6 +334,39 @@
                 <exit id="Lqu-EC-CEu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1688" y="363"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="LGk-30-PxL">
+            <objects>
+                <viewController id="xKB-Qo-CMI" customClass="MapViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vDz-hk-W5i"/>
+                        <viewControllerLayoutGuide type="bottom" id="BxS-ui-fPA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dEL-VX-OMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XHZ-ie-Qz9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BxS-ui-fPA" firstAttribute="top" secondItem="XHZ-ie-Qz9" secondAttribute="bottom" id="7u7-ik-ous"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XHZ-ie-Qz9" secondAttribute="trailing" constant="-16" id="M3I-Wf-kLe"/>
+                            <constraint firstItem="XHZ-ie-Qz9" firstAttribute="leading" secondItem="dEL-VX-OMJ" secondAttribute="leadingMargin" constant="-16" id="Nki-VX-sfD"/>
+                            <constraint firstItem="XHZ-ie-Qz9" firstAttribute="top" secondItem="dEL-VX-OMJ" secondAttribute="topMargin" id="X0F-f8-kb4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9RE-8F-R1K"/>
+                    <connections>
+                        <outlet property="mapView" destination="XHZ-ie-Qz9" id="Vc1-xz-T0C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X54-hm-qjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="-289"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="HSe-Nf-d5D">
