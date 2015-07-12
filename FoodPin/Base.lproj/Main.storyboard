@@ -8,7 +8,7 @@
         <!--New Restaurant-->
         <scene sceneID="8qU-dP-Vls">
             <objects>
-                <tableViewController id="1Ha-mY-KyW" sceneMemberID="viewController">
+                <tableViewController id="1Ha-mY-KyW" customClass="AddTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XdO-vS-qbH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +109,9 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didTappedYesButton:" destination="1Ha-mY-KyW" eventType="touchUpInside" id="r3o-hc-I4S"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLO-n6-9ne">
                                                     <rect key="frame" x="79" y="33" width="46" height="30"/>
@@ -118,6 +121,9 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didTappedNoButton:" destination="1Ha-mY-KyW" eventType="touchUpInside" id="c9Z-ak-I30"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -132,11 +138,26 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="New Restaurant" id="FDW-dS-NmW">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="WBx-gb-H9w">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="YtB-W7-57i" kind="unwind" unwindAction="unwindToHomeScreen:" id="wkC-fu-A3O"/>
+                                <segue destination="YtB-W7-57i" kind="unwind" identifier="unwindToHomeScreen" unwindAction="unwindToHomeScreen:" id="wkC-fu-A3O"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wxt-Qu-5La">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="save:" destination="1Ha-mY-KyW" id="Vvs-ZR-jaq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="fp4-Kf-s07" id="SBO-HK-1PD"/>
+                        <outlet property="locationTextField" destination="XJr-EI-Trm" id="bmh-ez-arF"/>
+                        <outlet property="nameTextField" destination="sJn-aH-THq" id="Hch-pG-wfq"/>
+                        <outlet property="noButton" destination="vLO-n6-9ne" id="mOq-VA-O5S"/>
+                        <outlet property="typeTextField" destination="XCu-lt-b78" id="Rdf-cA-joo"/>
+                        <outlet property="yesButton" destination="dCY-1D-omL" id="jCF-ba-uyX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRX-Zc-S7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YtB-W7-57i" userLabel="Exit" sceneMemberID="exit"/>
@@ -227,6 +248,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Food Pin" id="7x5-xK-Aqu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pki-Ne-Uu1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="hGM-K3-DoB" kind="modal" identifier="addRestaurant" id="r9K-9P-Shp"/>
                             </connections>
