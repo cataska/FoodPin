@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -18,6 +19,7 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
     @IBOutlet weak var noButton: UIButton!
     
     var haveBeenThere = true
+    var restaurant: Restaurant!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +92,21 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
         println("Type: \(self.typeTextField.text)")
         println("Location: \(self.locationTextField.text)")
         println("Have you been here: " + (self.haveBeenThere ? "yes" : "no"))
+        
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+            restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: managedObjectContext) as! Restaurant
+            restaurant.name = self.nameTextField.text
+            restaurant.type = self.typeTextField.text
+            restaurant.location = self.locationTextField.text
+            restaurant.image = UIImagePNGRepresentation(self.imageView.image)
+            restaurant.isVisited = self.haveBeenThere
+            
+            var e: NSError?
+            if managedObjectContext.save(&e) != true {
+                println("insert error: \(e?.localizedDescription)")
+                return
+            }
+        }
         
         performSegueWithIdentifier("unwindToHomeScreen", sender: self)
     }

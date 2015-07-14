@@ -23,7 +23,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
         self.tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
         
-        self.restaurantImageView.image = UIImage(named: restaurant.image)
+        self.restaurantImageView.image = UIImage(data: restaurant.image)
         
         self.tableView.estimatedRowHeight = 36.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -66,7 +66,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             
         case 3:
             cell.fieldLabel.text = "Been here"
-            cell.valueLabel.text = restaurant.isVisited ? "Yes, I've been here before" : "No"
+            cell.valueLabel.text = (restaurant.isVisited.boolValue) ? "Yes, I've been here before" : "No"
             
         default:
             cell.fieldLabel.text = ""

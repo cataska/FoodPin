@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B24403E1B52655600253821 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B24403C1B52655600253821 /* FoodPin.xcdatamodeld */; };
 		7B63E0501B45110500AECF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E04F1B45110500AECF33 /* AppDelegate.swift */; };
 		7B63E0551B45110500AECF33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B63E0531B45110500AECF33 /* Main.storyboard */; };
 		7B63E0571B45110500AECF33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B63E0561B45110500AECF33 /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B24403D1B52655600253821 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		7B63E04A1B45110500AECF33 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B63E04E1B45110500AECF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B63E04F1B45110500AECF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				7B63E0561B45110500AECF33 /* Images.xcassets */,
 				7B63E0581B45110500AECF33 /* LaunchScreen.xib */,
 				7B63E04D1B45110500AECF33 /* Supporting Files */,
+				7B24403C1B52655600253821 /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B92CBE81B46E0DC007FEDA1 /* DetailTableViewCell.swift in Sources */,
+				7B24403E1B52655600253821 /* FoodPin.xcdatamodeld in Sources */,
 				7B92CBE61B469260007FEDA1 /* Restaurant.swift in Sources */,
 				7B8194DE1B4BD00800FDA938 /* ReviewViewController.swift in Sources */,
 				7B92CBE21B4525A5007FEDA1 /* CustomTableViewCell.swift in Sources */,
@@ -462,6 +466,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7B24403C1B52655600253821 /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7B24403D1B52655600253821 /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = 7B24403D1B52655600253821 /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B63E0421B45110500AECF33 /* Project object */;
 }
