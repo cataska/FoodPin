@@ -33,6 +33,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         self.searchController.searchBar.sizeToFit()
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.definesPresentationContext = true
+        
+        self.searchController.searchResultsUpdater = self
+        self.searchController.dimsBackgroundDuringPresentation = false
 
         var fetchRequest = NSFetchRequest(entityName: "Restaurant")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -103,33 +106,39 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.restaurants.count
+        if searchController.active {
+            return searchResults.count
+        } else {
+            return self.restaurants.count
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomTableViewCell
+        let restaurant = (searchController.active) ? searchResults[indexPath.row] : restaurants[indexPath.row]
 
         // Configure the cell...
-        cell.nameLabel.text = self.restaurants[indexPath.row].name
-        cell.locationLabel.text = self.restaurants[indexPath.row].location
-        cell.typeLabel.text = self.restaurants[indexPath.row].type
+        cell.nameLabel.text = restaurant.name
+        cell.locationLabel.text = restaurant.location
+        cell.typeLabel.text = restaurant.type
         
-        cell.thumbnailImageView.image = UIImage(data: self.restaurants[indexPath.row].image)
+        cell.thumbnailImageView.image = UIImage(data: restaurant.image)
         cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2
         cell.thumbnailImageView.clipsToBounds = true
         
-        cell.favorIconImageView.hidden = !(self.restaurants[indexPath.row].isVisited.boolValue)
+        cell.favorIconImageView.hidden = !(restaurant.isVisited.boolValue)
         
         return cell
     }
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+        if searchController.active {
+            return false
+        } else {
+            return true
+        }
     }
-    */
 
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -198,7 +207,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let destinationController = segue.destinationViewController as! DetailViewController
-                destinationController.restaurant = self.restaurants[indexPath.row]
+                let restaurant = searchController.active ? searchResults[indexPath.row] : restaurants[indexPath.row]
+                destinationController.restaurant = restaurant
             }
         }
     }
@@ -242,6 +252,12 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             
             return nameMatch != nil
         })
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchText = searchController.searchBar.text
+        filterContentForSearchText(searchText)
+        tableView.reloadData()
     }
 
 }
