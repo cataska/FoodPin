@@ -33,7 +33,9 @@ class FeedTableViewController: UITableViewController {
             if error == nil {
                 println("Completed the download of Restaurant data")
                 self.restaurants = results as! [CKRecord]
-                self.tableView.reloadData()
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.tableView.reloadData()
+                })
             } else {
                 println(error)
             }
