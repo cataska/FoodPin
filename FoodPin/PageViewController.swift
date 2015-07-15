@@ -61,6 +61,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         return self.viewControllerAtIndex(index)
     }
     
+    func forward(index: Int) {
+        if let nextViewController = self.viewControllerAtIndex(index + 1) {
+            setViewControllers([nextViewController], direction: .Forward, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
