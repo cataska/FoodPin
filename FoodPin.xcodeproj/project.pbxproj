@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B24403E1B52655600253821 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B24403C1B52655600253821 /* FoodPin.xcdatamodeld */; };
+		7B4F05FA1B5557AF0013CB98 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F05F91B5557AF0013CB98 /* PageContentViewController.swift */; };
+		7B4F05FC1B55643A0013CB98 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F05FB1B55643A0013CB98 /* PageViewController.swift */; };
 		7B63E0501B45110500AECF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E04F1B45110500AECF33 /* AppDelegate.swift */; };
 		7B63E0551B45110500AECF33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B63E0531B45110500AECF33 /* Main.storyboard */; };
 		7B63E0571B45110500AECF33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B63E0561B45110500AECF33 /* Images.xcassets */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		7B24403D1B52655600253821 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		7B4F05F91B5557AF0013CB98 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		7B4F05FB1B55643A0013CB98 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		7B63E04A1B45110500AECF33 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B63E04E1B45110500AECF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B63E04F1B45110500AECF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */,
 				7B67B07D1B4FBEFE0039B5A1 /* MapViewController.swift */,
 				7B67B0811B50C8CB0039B5A1 /* AddTableViewController.swift */,
+				7B4F05FB1B55643A0013CB98 /* PageViewController.swift */,
+				7B4F05F91B5557AF0013CB98 /* PageContentViewController.swift */,
 				7B63E0531B45110500AECF33 /* Main.storyboard */,
 				7B63E0561B45110500AECF33 /* Images.xcassets */,
 				7B63E0581B45110500AECF33 /* LaunchScreen.xib */,
@@ -257,6 +263,8 @@
 				7B92CBE01B4512D0007FEDA1 /* RestaurantTableViewController.swift in Sources */,
 				7B63E0501B45110500AECF33 /* AppDelegate.swift in Sources */,
 				7B8194E01B4C2B9200FDA938 /* ShareViewController.swift in Sources */,
+				7B4F05FA1B5557AF0013CB98 /* PageContentViewController.swift in Sources */,
+				7B4F05FC1B55643A0013CB98 /* PageViewController.swift in Sources */,
 				7B92CBE41B457CD2007FEDA1 /* DetailViewController.swift in Sources */,
 				7B67B0821B50C8CB0039B5A1 /* AddTableViewController.swift in Sources */,
 			);
