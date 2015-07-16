@@ -12,6 +12,7 @@ import CloudKit
 class FeedTableViewController: UITableViewController {
     
     var restaurants: [CKRecord] = []
+    var spinner = UIActivityIndicatorView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class FeedTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /* Convenience API
     func getRecordsFromCloud() {
         let cloudContainer = CKContainer.defaultContainer()
         let publicDatabase = cloudContainer.publicCloudDatabase
@@ -41,7 +43,47 @@ class FeedTableViewController: UITableViewController {
             }
         }
     }
+    */
 
+    // Operational API
+    func getRecordsFromCloud() {
+        spinner.activityIndicatorViewStyle = .Gray
+        spinner.center = self.view.center
+        spinner.hidesWhenStopped = true
+        parentViewController?.view.addSubview(spinner)
+        spinner.startAnimating()
+        
+        restaurants = []
+        
+        let cloudContainer = CKContainer.defaultContainer()
+        let publicDatabase = cloudContainer.publicCloudDatabase
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: "Restaurant", predicate: predicate)
+
+        let queryOperation = CKQueryOperation(query: query)
+        queryOperation.desiredKeys = ["name", "image"]
+        queryOperation.queuePriority = .VeryHigh
+        queryOperation.resultsLimit = 50
+        queryOperation.recordFetchedBlock = { (record: CKRecord!) -> Void in
+            if let restaurantRecord = record {
+                self.restaurants.append(restaurantRecord)
+            }
+        }
+        queryOperation.queryCompletionBlock = { (cursor: CKQueryCursor!, error: NSError!) -> Void in
+            if error != nil {
+                println("Failed to get data from iCloud - \(error.localizedDescription)")
+            } else {
+                println("Succesfully retrieve the data from iCloud")
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.spinner.stopAnimating()
+                    self.tableView.reloadData()
+                })
+
+            }
+        }
+        publicDatabase.addOperation(queryOperation)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
