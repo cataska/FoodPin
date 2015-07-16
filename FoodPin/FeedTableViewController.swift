@@ -65,6 +65,7 @@ class FeedTableViewController: UITableViewController {
         let publicDatabase = cloudContainer.publicCloudDatabase
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Restaurant", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
 
         let queryOperation = CKQueryOperation(query: query)
         queryOperation.desiredKeys = ["name"]
