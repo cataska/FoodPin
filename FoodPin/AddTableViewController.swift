@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CloudKit
 
 class AddTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -106,6 +107,8 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
                 println("insert error: \(e?.localizedDescription)")
                 return
             }
+            
+            saveRecordToCloud(restaurant)
         }
         
         performSegueWithIdentifier("unwindToHomeScreen", sender: self)
@@ -121,6 +124,34 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
         self.yesButton.backgroundColor = UIColor.lightGrayColor()
         self.noButton.backgroundColor = UIColor.redColor()
         self.haveBeenThere = false
+    }
+    
+    func saveRecordToCloud(restaurant: Restaurant!) {
+        var record = CKRecord(recordType: "Restaurant")
+        record.setValue(restaurant.name, forKey: "name")
+        record.setValue(restaurant.type, forKey: "type")
+        record.setValue(restaurant.location, forKey: "location")
+        
+        var originalImage = UIImage(data: restaurant.image)
+        var scalingFactor = originalImage!.size.width > 1024 ? 1024 / originalImage!.size.width : 1.0
+        var scaledImage = UIImage(data: restaurant.image, scale: scalingFactor)
+        
+        let imageFilePath = NSTemporaryDirectory() + restaurant.name
+        UIImageJPEGRepresentation(scaledImage, 0.8).writeToFile(imageFilePath, atomically: true)
+        
+        let imageFileURL = NSURL(fileURLWithPath: imageFilePath)
+        let imageAsset = CKAsset(fileURL: imageFileURL)
+        record.setValue(imageAsset, forKey: "image")
+        
+        let cloudContainer = CKContainer.defaultContainer()
+        let publicDatabase = cloudContainer.publicCloudDatabase
+        
+        publicDatabase.saveRecord(record, completionHandler: { (record: CKRecord!, error: NSError!) -> Void in
+            NSFileManager.defaultManager().removeItemAtPath(imageFilePath, error: nil)
+            if error != nil {
+                println("Failed to save record to the cloud: \(error.description)")
+            }
+        })
     }
     
     /*
