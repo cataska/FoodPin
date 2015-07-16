@@ -14,6 +14,7 @@
 		7B4F06001B565B290013CB98 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F05FF1B565B290013CB98 /* WebViewController.swift */; };
 		7B4F06031B5681F60013CB98 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4F06021B5681F60013CB98 /* CloudKit.framework */; };
 		7B4F06051B568AAC0013CB98 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F06041B568AAC0013CB98 /* FeedTableViewController.swift */; };
+		7B4F06071B57A8AD0013CB98 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F06061B57A8AD0013CB98 /* FeedDetailViewController.swift */; };
 		7B63E0501B45110500AECF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63E04F1B45110500AECF33 /* AppDelegate.swift */; };
 		7B63E0551B45110500AECF33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B63E0531B45110500AECF33 /* Main.storyboard */; };
 		7B63E0571B45110500AECF33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B63E0561B45110500AECF33 /* Images.xcassets */; };
@@ -50,6 +51,7 @@
 		7B4F06011B5681E20013CB98 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FoodPin.entitlements; sourceTree = "<group>"; };
 		7B4F06021B5681F60013CB98 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7B4F06041B568AAC0013CB98 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		7B4F06061B57A8AD0013CB98 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		7B63E04A1B45110500AECF33 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B63E04E1B45110500AECF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B63E04F1B45110500AECF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				7B4F05FD1B565A590013CB98 /* AboutViewController.swift */,
 				7B4F05FF1B565B290013CB98 /* WebViewController.swift */,
 				7B4F06041B568AAC0013CB98 /* FeedTableViewController.swift */,
+				7B4F06061B57A8AD0013CB98 /* FeedDetailViewController.swift */,
 				7B63E0531B45110500AECF33 /* Main.storyboard */,
 				7B63E0561B45110500AECF33 /* Images.xcassets */,
 				7B63E0581B45110500AECF33 /* LaunchScreen.xib */,
@@ -284,6 +287,7 @@
 				7B63E0501B45110500AECF33 /* AppDelegate.swift in Sources */,
 				7B8194E01B4C2B9200FDA938 /* ShareViewController.swift in Sources */,
 				7B4F05FA1B5557AF0013CB98 /* PageContentViewController.swift in Sources */,
+				7B4F06071B57A8AD0013CB98 /* FeedDetailViewController.swift in Sources */,
 				7B4F05FE1B565A590013CB98 /* AboutViewController.swift in Sources */,
 				7B4F05FC1B55643A0013CB98 /* PageViewController.swift in Sources */,
 				7B92CBE41B457CD2007FEDA1 /* DetailViewController.swift in Sources */,
