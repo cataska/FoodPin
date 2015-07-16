@@ -61,7 +61,7 @@ class FeedTableViewController: UITableViewController {
         let query = CKQuery(recordType: "Restaurant", predicate: predicate)
 
         let queryOperation = CKQueryOperation(query: query)
-        queryOperation.desiredKeys = ["name", "image"]
+        queryOperation.desiredKeys = ["name"]
         queryOperation.queuePriority = .VeryHigh
         queryOperation.resultsLimit = 50
         queryOperation.recordFetchedBlock = { (record: CKRecord!) -> Void in
@@ -100,14 +100,34 @@ class FeedTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        if restaurants.isEmpty {
+            return cell
+        }
 
         // Configure the cell...
         let restaurant = restaurants[indexPath.row]
         cell.textLabel?.text = restaurant.objectForKey("name") as? String
-        if restaurant.objectForKey("image") != nil {
-            let imageAsset = restaurant.objectForKey("image") as! CKAsset
-            cell.imageView?.image = UIImage(data: NSData(contentsOfURL: imageAsset.fileURL)!)
+        
+        cell.imageView?.image = UIImage(named: "camera")
+        
+        let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
+        let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
+        fetchRecordsImageOperation.desiredKeys = ["image"]
+        fetchRecordsImageOperation.queuePriority = .VeryHigh
+        fetchRecordsImageOperation.perRecordCompletionBlock = {
+            (record: CKRecord!, recordID: CKRecordID!, error: NSError!) -> Void in
+            if error != nil {
+                println("Failed to get restaurant image: \(error.localizedDescription)")
+            } else {
+                if let restaurantRecord = record {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        let imageAsset = restaurantRecord.objectForKey("image") as! CKAsset
+                        cell.imageView?.image = UIImage(data: NSData(contentsOfURL: imageAsset.fileURL)!)
+                    })
+                }
+            }
         }
+        publicDatabase.addOperation(fetchRecordsImageOperation)
 
         return cell
     }
