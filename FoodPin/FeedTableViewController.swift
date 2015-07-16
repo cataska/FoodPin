@@ -19,6 +19,11 @@ class FeedTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.getRecordsFromCloud()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = UIColor.whiteColor()
+        refreshControl?.tintColor = UIColor.grayColor()
+        refreshControl?.addTarget(self, action: "getRecordsFromCloud", forControlEvents: UIControlEvents.ValueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,12 +76,19 @@ class FeedTableViewController: UITableViewController {
             }
         }
         queryOperation.queryCompletionBlock = { (cursor: CKQueryCursor!, error: NSError!) -> Void in
+            if self.spinner.isAnimating() {
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.spinner.stopAnimating()
+                })
+            }
+            
+            self.refreshControl?.endRefreshing()
+            
             if error != nil {
                 println("Failed to get data from iCloud - \(error.localizedDescription)")
             } else {
                 println("Succesfully retrieve the data from iCloud")
                 dispatch_async(dispatch_get_main_queue(), {
-                    self.spinner.stopAnimating()
                     self.tableView.reloadData()
                 })
 
