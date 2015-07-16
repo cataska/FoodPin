@@ -13,6 +13,7 @@ class FeedTableViewController: UITableViewController {
     
     var restaurants: [CKRecord] = []
     var spinner = UIActivityIndicatorView()
+    var imageCache = NSCache()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,24 +111,30 @@ class FeedTableViewController: UITableViewController {
         
         cell.imageView?.image = UIImage(named: "camera")
         
-        let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
-        let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
-        fetchRecordsImageOperation.desiredKeys = ["image"]
-        fetchRecordsImageOperation.queuePriority = .VeryHigh
-        fetchRecordsImageOperation.perRecordCompletionBlock = {
-            (record: CKRecord!, recordID: CKRecordID!, error: NSError!) -> Void in
-            if error != nil {
-                println("Failed to get restaurant image: \(error.localizedDescription)")
-            } else {
-                if let restaurantRecord = record {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        let imageAsset = restaurantRecord.objectForKey("image") as! CKAsset
-                        cell.imageView?.image = UIImage(data: NSData(contentsOfURL: imageAsset.fileURL)!)
-                    })
+        if let imageFileURL = imageCache.objectForKey(restaurant.recordID) as? NSURL {
+            println("Get image from cache")
+            cell.imageView?.image = UIImage(data: NSData(contentsOfURL: imageFileURL)!)
+        } else {
+            let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
+            let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
+            fetchRecordsImageOperation.desiredKeys = ["image"]
+            fetchRecordsImageOperation.queuePriority = .VeryHigh
+            fetchRecordsImageOperation.perRecordCompletionBlock = {
+                (record: CKRecord!, recordID: CKRecordID!, error: NSError!) -> Void in
+                if error != nil {
+                    println("Failed to get restaurant image: \(error.localizedDescription)")
+                } else {
+                    if let restaurantRecord = record {
+                        dispatch_async(dispatch_get_main_queue(), {
+                            let imageAsset = restaurantRecord.objectForKey("image") as! CKAsset
+                            self.imageCache.setObject(imageAsset.fileURL, forKey: restaurant.recordID)
+                            cell.imageView?.image = UIImage(data: NSData(contentsOfURL: imageAsset.fileURL)!)
+                        })
+                    }
                 }
             }
+            publicDatabase.addOperation(fetchRecordsImageOperation)
         }
-        publicDatabase.addOperation(fetchRecordsImageOperation)
 
         return cell
     }
