@@ -23,6 +23,9 @@
 		7B67B07C1B4FBA8E0039B5A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B67B07B1B4FBA8E0039B5A1 /* MapKit.framework */; };
 		7B67B07E1B4FBEFE0039B5A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67B07D1B4FBEFE0039B5A1 /* MapViewController.swift */; };
 		7B67B0821B50C8CB0039B5A1 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67B0811B50C8CB0039B5A1 /* AddTableViewController.swift */; };
+		7B73CBF71B58EEF60081FDDE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B73CBF91B58EEF60081FDDE /* Localizable.strings */; };
+		7B73CBFC1B58EEF70081FDDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B73CBFE1B58EEF70081FDDE /* InfoPlist.strings */; };
+		7B73CC011B58EEF70081FDDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B73CC031B58EEF70081FDDE /* InfoPlist.strings */; };
 		7B8194DE1B4BD00800FDA938 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8194DD1B4BD00800FDA938 /* ReviewViewController.swift */; };
 		7B8194E01B4C2B9200FDA938 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */; };
 		7B92CBE01B4512D0007FEDA1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92CBDF1B4512D0007FEDA1 /* RestaurantTableViewController.swift */; };
@@ -64,6 +67,11 @@
 		7B67B07B1B4FBA8E0039B5A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7B67B07D1B4FBEFE0039B5A1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7B67B0811B50C8CB0039B5A1 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		7B73CBF31B58EDC10081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		7B73CBF41B58EDC10081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7B73CBF81B58EEF60081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7B73CBFD1B58EEF70081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		7B73CC021B58EEF70081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		7B8194DD1B4BD00800FDA938 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		7B92CBDF1B4512D0007FEDA1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +153,8 @@
 		7B63E04D1B45110500AECF33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B73CBFE1B58EEF70081FDDE /* InfoPlist.strings */,
+				7B73CBF91B58EEF60081FDDE /* Localizable.strings */,
 				7B63E04E1B45110500AECF33 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -162,6 +172,7 @@
 		7B63E0631B45110500AECF33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B73CC031B58EEF70081FDDE /* InfoPlist.strings */,
 				7B63E0641B45110500AECF33 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -257,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B63E0551B45110500AECF33 /* Main.storyboard in Resources */,
+				7B73CBF71B58EEF60081FDDE /* Localizable.strings in Resources */,
 				7B63E05A1B45110500AECF33 /* LaunchScreen.xib in Resources */,
 				7B63E0571B45110500AECF33 /* Images.xcassets in Resources */,
+				7B73CBFC1B58EEF70081FDDE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B73CC011B58EEF70081FDDE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +333,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7B63E0541B45110500AECF33 /* Base */,
+				7B73CBF31B58EDC10081FDDE /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -327,8 +342,33 @@
 			isa = PBXVariantGroup;
 			children = (
 				7B63E0591B45110500AECF33 /* Base */,
+				7B73CBF41B58EDC10081FDDE /* zh-Hant */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7B73CBF91B58EEF60081FDDE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B73CBF81B58EEF60081FDDE /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		7B73CBFE1B58EEF70081FDDE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B73CBFD1B58EEF70081FDDE /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B73CC031B58EEF70081FDDE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B73CC021B58EEF70081FDDE /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

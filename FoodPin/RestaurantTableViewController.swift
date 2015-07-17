@@ -155,11 +155,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
             
-            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: UIAlertControllerStyle.ActionSheet)
-            let twitterAction = UIAlertAction(title: "Twitter", style: .Default, handler: nil)
-            let facebookAction = UIAlertAction(title: "Facebook", style: .Default, handler: nil)
-            let emailAction = UIAlertAction(title: "Email", style: .Default, handler: nil)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            let shareMenu = UIAlertController(title: nil, message: NSLocalizedString("Share using", comment: "For social sharing"), preferredStyle: UIAlertControllerStyle.ActionSheet)
+            let twitterAction = UIAlertAction(title: NSLocalizedString("Twitter", comment: "For sharing on Twitter"), style: .Default, handler: nil)
+            let facebookAction = UIAlertAction(title: NSLocalizedString("Facebook", comment: "For sharing on Facebook"), style: .Default, handler: nil)
+            let emailAction = UIAlertAction(title: NSLocalizedString("Email", comment: "For sharing on Email"), style: .Default, handler: nil)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .Cancel, handler: nil)
             
             shareMenu.addAction(twitterAction)
             shareMenu.addAction(facebookAction)
