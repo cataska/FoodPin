@@ -26,6 +26,7 @@
 		7B73CBF71B58EEF60081FDDE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B73CBF91B58EEF60081FDDE /* Localizable.strings */; };
 		7B73CBFC1B58EEF70081FDDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B73CBFE1B58EEF70081FDDE /* InfoPlist.strings */; };
 		7B73CC011B58EEF70081FDDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B73CC031B58EEF70081FDDE /* InfoPlist.strings */; };
+		7B73CC0C1B58FEA30081FDDE /* aboutfoodpin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B73CC0E1B58FEA30081FDDE /* aboutfoodpin.png */; };
 		7B8194DE1B4BD00800FDA938 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8194DD1B4BD00800FDA938 /* ReviewViewController.swift */; };
 		7B8194E01B4C2B9200FDA938 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */; };
 		7B92CBE01B4512D0007FEDA1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92CBDF1B4512D0007FEDA1 /* RestaurantTableViewController.swift */; };
@@ -72,6 +73,8 @@
 		7B73CBF81B58EEF60081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7B73CBFD1B58EEF70081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		7B73CC021B58EEF70081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		7B73CC0D1B58FEA30081FDDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/aboutfoodpin.png; sourceTree = "<group>"; };
+		7B73CC0F1B58FEA70081FDDE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/aboutfoodpin.png"; sourceTree = "<group>"; };
 		7B8194DD1B4BD00800FDA938 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		7B8194DF1B4C2B9100FDA938 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		7B92CBDF1B4512D0007FEDA1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 		7B63E04D1B45110500AECF33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B73CC0E1B58FEA30081FDDE /* aboutfoodpin.png */,
 				7B73CBFE1B58EEF70081FDDE /* InfoPlist.strings */,
 				7B73CBF91B58EEF60081FDDE /* Localizable.strings */,
 				7B63E04E1B45110500AECF33 /* Info.plist */,
@@ -269,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B63E0551B45110500AECF33 /* Main.storyboard in Resources */,
+				7B73CC0C1B58FEA30081FDDE /* aboutfoodpin.png in Resources */,
 				7B73CBF71B58EEF60081FDDE /* Localizable.strings in Resources */,
 				7B63E05A1B45110500AECF33 /* LaunchScreen.xib in Resources */,
 				7B63E0571B45110500AECF33 /* Images.xcassets in Resources */,
@@ -370,6 +375,15 @@
 				7B73CC021B58EEF70081FDDE /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B73CC0E1B58FEA30081FDDE /* aboutfoodpin.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B73CC0D1B58FEA30081FDDE /* Base */,
+				7B73CC0F1B58FEA70081FDDE /* zh-Hant */,
+			);
+			name = aboutfoodpin.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
