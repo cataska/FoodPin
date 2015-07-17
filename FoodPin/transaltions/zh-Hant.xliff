@@ -54,7 +54,7 @@
       </trans-unit>
       <trans-unit id="91C-JN-noG.title">
         <source>Feed</source>
-        <target>Feed</target>
+        <target>分享</target>
         <note>Class = "UITabBarItem"; title = "Feed"; ObjectID = "91C-JN-noG";</note>
       </trans-unit>
       <trans-unit id="Ch4-JM-Tdk.text">
