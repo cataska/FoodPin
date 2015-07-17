@@ -24,7 +24,7 @@
     <body>
       <trans-unit id="1AK-Ro-iq9.title">
         <source>Feed</source>
-        <target>Feed</target>
+        <target>分享</target>
         <note>Class = "UINavigationItem"; title = "Feed"; ObjectID = "1AK-Ro-iq9";</note>
       </trans-unit>
       <trans-unit id="4eC-Md-yOT.normalTitle">
@@ -64,12 +64,12 @@
       </trans-unit>
       <trans-unit id="Cmg-uC-tN4.normalTitle">
         <source>Map</source>
-        <target>Map</target>
+        <target>地圖</target>
         <note>Class = "UIButton"; normalTitle = "Map"; ObjectID = "Cmg-uC-tN4";</note>
       </trans-unit>
       <trans-unit id="FDW-dS-NmW.title">
         <source>New Restaurant</source>
-        <target>New Restaurant</target>
+        <target>新增餐廳</target>
         <note>Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "FDW-dS-NmW";</note>
       </trans-unit>
       <trans-unit id="HNf-zt-gmO.normalTitle">
@@ -104,7 +104,7 @@
       </trans-unit>
       <trans-unit id="Te1-0V-WNK.normalTitle">
         <source>Map</source>
-        <target>Map</target>
+        <target>地圖</target>
         <note>Class = "UIButton"; normalTitle = "Map"; ObjectID = "Te1-0V-WNK";</note>
       </trans-unit>
       <trans-unit id="Tf9-zc-Vo4.text">

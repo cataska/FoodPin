@@ -1,5 +1,5 @@
 /* Class = "UINavigationItem"; title = "Feed"; ObjectID = "1AK-Ro-iq9"; */
-"1AK-Ro-iq9.title" = "Feed";
+"1AK-Ro-iq9.title" = "分享";
 
 /* Class = "UIButton"; normalTitle = "Visit our website"; ObjectID = "4eC-Md-yOT"; */
 "4eC-Md-yOT.normalTitle" = "網頁連結";
@@ -23,10 +23,10 @@
 "Ch4-JM-Tdk.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Map"; ObjectID = "Cmg-uC-tN4"; */
-"Cmg-uC-tN4.normalTitle" = "Map";
+"Cmg-uC-tN4.normalTitle" = "地圖";
 
 /* Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "FDW-dS-NmW"; */
-"FDW-dS-NmW.title" = "New Restaurant";
+"FDW-dS-NmW.title" = "新增餐廳";
 
 /* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "HNf-zt-gmO"; */
 "HNf-zt-gmO.normalTitle" = "聯絡我們";
@@ -47,7 +47,7 @@
 "Q67-Ch-ndI.text" = "Field";
 
 /* Class = "UIButton"; normalTitle = "Map"; ObjectID = "Te1-0V-WNK"; */
-"Te1-0V-WNK.normalTitle" = "Map";
+"Te1-0V-WNK.normalTitle" = "地圖";
 
 /* Class = "UILabel"; text = "TYPE"; ObjectID = "Tf9-zc-Vo4"; */
 "Tf9-zc-Vo4.text" = "TYPE";
