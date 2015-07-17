@@ -2,7 +2,7 @@
 "1AK-Ro-iq9.title" = "Feed";
 
 /* Class = "UIButton"; normalTitle = "Visit our website"; ObjectID = "4eC-Md-yOT"; */
-"4eC-Md-yOT.normalTitle" = "Visit our website";
+"4eC-Md-yOT.normalTitle" = "網頁連結";
 
 /* Class = "UILabel"; text = "Value"; ObjectID = "4ly-0K-6PB"; */
 "4ly-0K-6PB.text" = "Value";
@@ -14,7 +14,7 @@
 "7x5-xK-Aqu.title" = "Food Pin";
 
 /* Class = "UILabel"; text = "Got Questions ?"; ObjectID = "8Th-OP-By7"; */
-"8Th-OP-By7.text" = "Got Questions ?";
+"8Th-OP-By7.text" = "如有疑問";
 
 /* Class = "UITabBarItem"; title = "Feed"; ObjectID = "91C-JN-noG"; */
 "91C-JN-noG.title" = "Feed";
@@ -29,7 +29,7 @@
 "FDW-dS-NmW.title" = "New Restaurant";
 
 /* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "HNf-zt-gmO"; */
-"HNf-zt-gmO.normalTitle" = "Contact Us";
+"HNf-zt-gmO.normalTitle" = "聯絡我們";
 
 /* Class = "UILabel"; text = "Heading"; ObjectID = "IiG-DH-RID"; */
 "IiG-DH-RID.text" = "Heading";
@@ -41,7 +41,7 @@
 "K5H-al-WKU.text" = "Type";
 
 /* Class = "UILabel"; text = "You're just a tap away"; ObjectID = "LbM-XR-Pcw"; */
-"LbM-XR-Pcw.text" = "You're just a tap away";
+"LbM-XR-Pcw.text" = "請聯絡我們";
 
 /* Class = "UILabel"; text = "Field"; ObjectID = "Q67-Ch-ndI"; */
 "Q67-Ch-ndI.text" = "Field";

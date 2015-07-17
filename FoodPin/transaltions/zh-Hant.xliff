@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="4eC-Md-yOT.normalTitle">
         <source>Visit our website</source>
-        <target>Visit our website</target>
+        <target>網頁連結</target>
         <note>Class = "UIButton"; normalTitle = "Visit our website"; ObjectID = "4eC-Md-yOT";</note>
       </trans-unit>
       <trans-unit id="4ly-0K-6PB.text">
@@ -49,7 +49,7 @@
       </trans-unit>
       <trans-unit id="8Th-OP-By7.text">
         <source>Got Questions ?</source>
-        <target>Got Questions ?</target>
+        <target>如有疑問</target>
         <note>Class = "UILabel"; text = "Got Questions ?"; ObjectID = "8Th-OP-By7";</note>
       </trans-unit>
       <trans-unit id="91C-JN-noG.title">
@@ -74,7 +74,7 @@
       </trans-unit>
       <trans-unit id="HNf-zt-gmO.normalTitle">
         <source>Contact Us</source>
-        <target>Contact Us</target>
+        <target>聯絡我們</target>
         <note>Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "HNf-zt-gmO";</note>
       </trans-unit>
       <trans-unit id="IiG-DH-RID.text">
@@ -94,7 +94,7 @@
       </trans-unit>
       <trans-unit id="LbM-XR-Pcw.text">
         <source>You're just a tap away</source>
-        <target>You're just a tap away</target>
+        <target>請聯絡我們</target>
         <note>Class = "UILabel"; text = "You're just a tap away"; ObjectID = "LbM-XR-Pcw";</note>
       </trans-unit>
       <trans-unit id="Q67-Ch-ndI.text">
