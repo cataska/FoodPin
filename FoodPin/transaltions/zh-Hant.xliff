@@ -144,7 +144,7 @@
       </trans-unit>
       <trans-unit id="aza-CY-jxA.title">
         <source>About</source>
-        <target>About</target>
+        <target>關於我們</target>
         <note>Class = "UINavigationItem"; title = "About"; ObjectID = "aza-CY-jxA";</note>
       </trans-unit>
       <trans-unit id="dCY-1D-omL.normalTitle">
